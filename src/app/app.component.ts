@@ -4,14 +4,18 @@ import { PrimeNGConfig } from 'primeng/api';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-    styles: [`
+  styles: [
+    `
         :host ::ng-deep button {
             margin-right: .5em;
         }
-    `]
+    `,
+  ],
 })
-export class AppComponent { 
+export class AppComponent {
   constructor(private primengConfig: PrimeNGConfig) {}
+
+  public texte: string;
 
   ngOnInit() {
     this.primengConfig.ripple = true;
